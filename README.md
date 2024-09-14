@@ -1,8 +1,5 @@
 # `Todo List using NextJs,NodeJs & MongoDB`
 
-* [Setup](#setup)
-* [API Endpoints](#api-endpoints)
-
 ## 📋 <a name="table">Table of Contents</a>
 
 1. 🤖 [Introduction](#introduction)
