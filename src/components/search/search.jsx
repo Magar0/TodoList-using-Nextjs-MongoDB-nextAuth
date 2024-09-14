@@ -51,7 +51,10 @@ const Search = ({ input, handleInput }) => {
           />
         </div>
       ) : (
-        <SearchOutlined className="text-xl" onClick={() => setSearch(true)} />
+        <SearchOutlined
+          className="text-xl text-white"
+          onClick={() => setSearch(true)}
+        />
       )}
     </i>
   );

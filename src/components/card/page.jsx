@@ -27,9 +27,9 @@ const TodoCard = ({ data, handlePage }) => {
       onClick={handleCardClick}
       className={twMerge(
         clsx(
-          "flex h-[100px] w-full flex-shrink-0 cursor-pointer flex-col gap-2 overflow-hidden rounded-lg border border-white bg-white px-4 py-2 hover:border-black active:border",
+          "flex h-[100px] w-full flex-shrink-0 cursor-pointer flex-col gap-2 overflow-hidden rounded-lg border-[3px] border-white bg-white px-4 py-2 hover:border-violet-700 active:border",
           {
-            "border-2 border-slate-300": data?._id === currentTodoSelected._id,
+            "border-violet-700": data?._id === currentTodoSelected?._id,
           },
         ),
       )}

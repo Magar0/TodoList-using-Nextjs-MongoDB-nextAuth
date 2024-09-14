@@ -26,7 +26,7 @@ const PopoverContent = () => {
   };
   return (
     <>
-      <div className="group mb-2 flex w-full cursor-pointer items-center justify-start gap-2 rounded-xl p-3 hover:bg-[#0859de] hover:text-white">
+      <div className="group mb-2 flex w-72 cursor-pointer items-center justify-start gap-2 rounded-xl p-3 hover:bg-[#0859de] hover:text-white">
         {imgLink ? (
           <Image
             className="h-11 w-11 rounded-full"
