@@ -1,7 +1,8 @@
+import SuspenseWrapper from "@/utils/SuspenseWrapper";
 import React from "react";
 
 const AuthLayout = ({ children }) => {
-  return <main>{children}</main>;
+  return <SuspenseWrapper>{children}</SuspenseWrapper>;
 };
 
 export default AuthLayout;
