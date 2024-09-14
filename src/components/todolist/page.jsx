@@ -28,7 +28,7 @@ const Todolist = ({ handlePage }) => {
 
   return (
     <>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between px-2">
         <TodoBtn />
         <Search input={searchInput} handleInput={handleSearch} />
       </div>

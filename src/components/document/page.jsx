@@ -75,13 +75,13 @@ const Document = ({ handlePage }) => {
   return (
     <>
       <div
-        className="flex cursor-pointer gap-1 px-1 font-semibold lg:hidden"
+        className="mb-2 flex cursor-pointer gap-1 px-2 font-semibold md:px-1 lg:hidden"
         onClick={() => handlePage(1)}
       >
-        <ArrowLeftOutlined />
-        <p className="text-2xl">Back</p>
+        <ArrowLeftOutlined style={{ color: "#fff" }} />
+        <p className="text-2xl text-slate-200">Back</p>
       </div>
-      <div className="flex h-full flex-grow flex-col items-start gap-5 rounded-md border-[1px] border-[#e5e3e3] bg-white px-10 py-8">
+      <div className="mx-4 flex h-full flex-grow flex-col items-start gap-5 rounded-md border-[1px] border-[#e5e3e3] bg-white px-6 py-8 lg:mx-0 lg:px-10">
         <div className="flex w-full justify-between">
           <Input
             className="border-none text-4xl font-semibold text-[#1B1B1B] sm:w-fit"
