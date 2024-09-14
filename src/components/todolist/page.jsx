@@ -6,27 +6,26 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setCurrentTodoSelected, setTodoList } from "@/store/slices/todo";
 import Search from "../search/search";
+import useSWR from "swr";
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Todolist = ({ handlePage }) => {
   const [searchInput, setSearchInput] = useState("");
-  const [loading, setLoading] = useState(false);
   const { todoList } = useSelector((state) => state.todo);
   const filteredTodos = useSelector((state) => state?.filteredTodos);
   const dispatch = useDispatch();
+  const { data, error, loading } = useSWR("/api/todos", fetcher);
 
   const handleSearch = (e) => setSearchInput(e);
-  const fetchData = async () => {
-    setLoading(true);
-    const result = await fetch("/api/todos");
-    const data = await result.json();
-    dispatch(setTodoList(data));
-    dispatch(setCurrentTodoSelected(data[0]));
-    setLoading(false);
-  };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (data) {
+      dispatch(setTodoList(data));
+      dispatch(setCurrentTodoSelected(data[0]));
+    }
+  }, [data]);
+
   return (
     <>
       <div className="flex items-center justify-between">
@@ -39,6 +38,7 @@ const Todolist = ({ handlePage }) => {
             <div className="loader mt-5"></div>
           </div>
         )}
+        {error && <div className="text-2xl text-red-500">Error Laoding </div>}
         {!searchInput &&
           todoList.length > 0 &&
           todoList.map((data, ind) => (

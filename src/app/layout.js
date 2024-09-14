@@ -3,7 +3,6 @@ import "./globals.css";
 import StoreProvider from "@/store/storeProvider";
 import SessionWrapper from "@/utils/SessionWrapper";
 import Header from "@/components/header";
-import { usePathname } from "next/navigation";
 
 const poopins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -16,13 +15,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
-  if (pathname.startsWith("/localhost")) {
-    console.log = () => {};
-    console.error = () => {};
-    console.debug = () => {};
-  }
-
   return (
     <html lang="en">
       <head>
