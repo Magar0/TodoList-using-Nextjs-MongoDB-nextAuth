@@ -16,6 +16,8 @@
 
 <img src="https://github.com/user-attachments/assets/6b176543-5c2a-4e22-93c0-0a201d48bbcb" height="350" >
 
+This Todo App, developed with Next.js, provides a robust and user-friendly platform for managing tasks. It integrates modern authentication methods using NextAuth for secure login through Google, GitHub, or custom email/password. The app offers a responsive design to ensure a seamless experience across all devices, from desktops to mobile phones. With features like real-time updates, efficient state management, and powerful search capabilities, this application is designed to enhance productivity and streamline task management.
+
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
