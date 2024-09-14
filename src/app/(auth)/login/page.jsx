@@ -116,6 +116,7 @@ const SignInPage = () => {
                     <button
                       type="submit"
                       className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-800 px-4 py-2 text-white shadow-md shadow-slate-500 hover:bg-blue-900"
+                      disabled={loading}
                     >
                       Signin
                       {loading && <LoadingOutlined />}

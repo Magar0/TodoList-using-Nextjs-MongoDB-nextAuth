@@ -5,6 +5,29 @@ import Credentials from "next-auth/providers/credentials";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import * as bcrypt from "bcrypt";
+import Todo from "@/utils/models/todoSchema";
+
+const createNewUser = async (token) => {
+  let password = "123456"; //default password
+  const hashedPswd = await bcrypt.hash(password, 12);
+  console.log("🟡neww User running");
+
+  const newUser = await User.create({
+    username: token.name,
+    email: token.email,
+    password: hashedPswd,
+    imgLink: token.image,
+  });
+  console.log("🟢neww User running");
+  //create empty todo for new user
+  await Todo.create({
+    userId: newUser._id,
+    email: token.email,
+    title: "",
+    description: "",
+  });
+  return newUser;
+};
 
 const handler = NextAuth({
   // Configure one or more authentication providers
@@ -56,9 +79,19 @@ const handler = NextAuth({
         if (!token._id) {
           await dbConnect();
           const userExisted = await User.findOne({ email: token.email });
-          if (!userExisted) return null;
-          token.username = userExisted.username;
-          token._id = userExisted._id;
+          // if user don't exist you can return null or create new account for it
+          // if (!userExisted) return null;
+          if (!userExisted) {
+            console.log({ userExisted });
+
+            const newUser = await createNewUser(token);
+            token.username = newUser.username;
+            token._id = newUser._id;
+          }
+          if (userExisted) {
+            token.username = userExisted.username;
+            token._id = userExisted._id;
+          }
         }
       }
       return token;

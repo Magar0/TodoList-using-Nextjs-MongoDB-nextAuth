@@ -28,6 +28,7 @@ export async function POST(req) {
       email,
       password: hashedPswd,
     });
+    //create empty todo for new user
     await Todo.create({
       userId: newUser._id,
       email,

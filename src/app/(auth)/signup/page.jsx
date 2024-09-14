@@ -140,6 +140,7 @@ const Signup = () => {
                     <button
                       type="submit"
                       className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-800 px-4 py-2 text-white shadow-md shadow-slate-500 hover:bg-blue-900"
+                      disabled={loading}
                     >
                       Signup
                       {loading && <LoadingOutlined />}
@@ -155,7 +156,7 @@ const Signup = () => {
             }}
           </Formik>
           {/* Github and google button */}
-          {/* <button
+          <button
             className="my-2 flex w-full items-center justify-center rounded-lg bg-slate-700 px-4 py-2 text-white hover:bg-slate-900"
             onClick={() => {
               signIn("github");
@@ -172,7 +173,7 @@ const Signup = () => {
           >
             <GoogleOutlined className="mr-2 text-blue-600" />
             Sign Up Using Google
-          </button> */}
+          </button>
           <p className="text-center">
             Already have an account?{" "}
             <span
