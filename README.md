@@ -14,7 +14,7 @@
 
 ## <a name="introduction">🤖 Introduction</a>
 
-<img src="https://github.com/user-attachments/assets/c960d580-c3c4-4881-a79f-5b7db20aeabe" height="350" >
+<img src="https://github.com/user-attachments/assets/6b176543-5c2a-4e22-93c0-0a201d48bbcb" height="350" >
 
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
@@ -68,7 +68,7 @@ Make sure you have the following installed on your machine:
 
 ```bash
 git clone https://github.com/Magar0/TodoList-using-Nextjs-MongoDB-nextAuth.git
-cd TodoList-using-Nextjs-MongoDB-nextAuth
+cd ./TodoList-using-Nextjs-MongoDB-nextAuth
 ```
 **Envirenment variables**
 
