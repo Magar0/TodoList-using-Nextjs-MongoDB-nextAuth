@@ -6,8 +6,7 @@
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
-5. 📲 [Download apk](#download-apk)
-6. 🕸️ [Snippets](#snippets) 
+6. 🕸️ [Endpoints](#endpoints) 
 
 ## <a name="introduction">🤖 Introduction</a>
 
@@ -100,7 +99,7 @@ npm run dev
 ```
 
 
-## API Endpoints
+## <a name="endpoints">🤸 Endpoints</a>
 
 | Endpoint | Description | Method | Request Body | Response Format (Example) |
 |----------|-------------|--------|--------------|----------------------------|
