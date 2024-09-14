@@ -103,9 +103,9 @@ npm run dev
 
 | Endpoint | Description | Method | Request Body | Response Format (Example) |
 |----------|-------------|--------|--------------|----------------------------|
-| `/todo` | Get all Todo | GET | None | JSON (Todo List) |
-| `/todo` | Create Todo | POST | None | JSON (Created Todo) |
-| `/todo` | Edit Todo | PUT | `{ _id, title, description}` | JSON (message:string) | 
-| `/todo` | Delete Todo | DELETE | `{id:String}` | JSON (message:string) |
+| `/api/todos` | Get all Todo | GET | None | JSON (Todo List) |
+| `/api/todos` | Create Todo | POST | None | JSON (Created Todo) |
+| `/api/todos` | Edit Todo | PUT | `{ _id, title, description}` | JSON (message:string) | 
+| `/api/todos` | Delete Todo | DELETE | `{id:String}` | JSON (message:string) |
 
 
